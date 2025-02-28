@@ -1,6 +1,7 @@
 {
 	"name": "dots-ng-lib",
 	"version": "0.0.0",
+	"packageManager": "npm@22.12.0",
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
