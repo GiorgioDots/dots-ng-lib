@@ -1,0 +1,30 @@
+{
+	"categories": [
+		{
+			"name": "auth",
+			"blocks": [
+				{
+					"name": "jwt-auth",
+					"directory": "src/app/blocks/auth/jwt-auth",
+					"category": "auth",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"jwt-auth.interceptor.ts",
+						"jwt-auth.service.ts",
+						"tokens-handler.ts"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"@angular/common@^19.2.0",
+						"@angular/core@^19.2.0",
+						"rxjs@~7.8.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				}
+			]
+		}
+	]
+}
