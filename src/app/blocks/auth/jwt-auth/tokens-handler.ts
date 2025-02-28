@@ -36,7 +36,7 @@ export abstract class TokensHandler<TData> {
    * @param refreshToken - The refresh token.
    */
   public setTokens(token: string, refreshToken: string) {
-    localStorage.setItem(this.tokenKey, token)
+    sessionStorage.setItem(this.tokenKey, token)
     localStorage.setItem(this.refreshTokenKey, refreshToken)
     this.tokenData = this.extractTokenData(token)
   }
@@ -45,7 +45,7 @@ export abstract class TokensHandler<TData> {
    * Clears the stored tokens from localStorage and resets token data.
    */
   public clearTokens() {
-    localStorage.removeItem(this.tokenKey)
+    sessionStorage.removeItem(this.tokenKey)
     localStorage.removeItem(this.refreshTokenKey)
     this.tokenData = undefined
   }
@@ -65,7 +65,7 @@ export abstract class TokensHandler<TData> {
    * @returns The access token or `null` if not found.
    */
   public getToken() {
-    return localStorage.getItem(this.tokenKey)
+    return sessionStorage.getItem(this.tokenKey)
   }
 
   /**
@@ -81,7 +81,7 @@ export abstract class TokensHandler<TData> {
    * Loads tokens from localStorage and extracts token data if tokens exist.
    */
   private loadTokens() {
-    const token = localStorage.getItem(this.tokenKey)
+    const token = sessionStorage.getItem(this.tokenKey)
     const refreshToken = localStorage.getItem(this.refreshTokenKey)
     if (token && refreshToken) {
       this.setTokens(token, refreshToken)
