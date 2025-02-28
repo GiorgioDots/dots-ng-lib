@@ -7,7 +7,11 @@
 	"doNotListCategories": [],
 	"listBlocks": [],
 	"listCategories": [],
-	"excludeDeps": [],
+	"excludeDeps": [
+		"@angular/common",
+		"@angular/core",
+		"rxjs"
+	],
 	"includeBlocks": [],
 	"includeCategories": [],
 	"excludeBlocks": [],

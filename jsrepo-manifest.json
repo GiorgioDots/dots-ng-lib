@@ -1,6 +1,62 @@
 {
 	"categories": [
 		{
+			"name": "api",
+			"blocks": [
+				{
+					"name": "dots-auth-api.service",
+					"directory": "src/app/blocks/api",
+					"category": "api",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"dots-auth-api.service.ts"
+					],
+					"localDependencies": [
+						"api/jwt-auth-request-dto",
+						"api/jwt-auth-response-dto"
+					],
+					"_imports_": {
+						"./jwt-auth-request-dto": "{{api/jwt-auth-request-dto}}",
+						"./jwt-auth-response-dto": "{{api/jwt-auth-response-dto}}"
+					},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "jwt-auth-request-dto",
+					"directory": "src/app/blocks/api",
+					"category": "api",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"jwt-auth-request-dto.ts"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				},
+				{
+					"name": "jwt-auth-response-dto",
+					"directory": "src/app/blocks/api",
+					"category": "api",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"jwt-auth-response-dto.ts"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
+				}
+			]
+		},
+		{
 			"name": "auth",
 			"blocks": [
 				{
@@ -16,13 +72,29 @@
 						"tokens-handler.ts"
 					],
 					"localDependencies": [],
-					"dependencies": [
-						"@angular/common@^19.2.0",
-						"@angular/core@^19.2.0",
-						"rxjs@~7.8.0"
-					],
+					"dependencies": [],
 					"devDependencies": [],
 					"_imports_": {}
+				}
+			]
+		},
+		{
+			"name": "utils",
+			"blocks": [
+				{
+					"name": "auth-utils",
+					"directory": "src/app/blocks/utils",
+					"category": "utils",
+					"tests": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"auth-utils.ts"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [],
+					"devDependencies": []
 				}
 			]
 		}
