@@ -14,7 +14,7 @@ export class DotsAuthApiService {
     this.authUrl = authUrl
   }
 
-  login(data: JwtAuthRequestDTO) {
+  getToken(data: JwtAuthRequestDTO) {
     if (!this.authUrl)
       throw new Error('No authUrl setted, maybe you forgot to initialize the service')
     return this.http.post<JwtAuthResponseDTO>(`${this.authUrl}/oauth/token`, data)
